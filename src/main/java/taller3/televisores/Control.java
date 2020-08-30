@@ -18,13 +18,13 @@ public class Control {
 	
 	public void canalUp() {
 		if (tv.getCanal()>1 && tv.getCanal()<120 && tv.getEstado() == true) {
-			tv.setCanal(tv.getCanal()+1);
+			tv.setCanal(tv.getCanal());
 		}		
 	}
 	
 	public void canalDown() {
 		if (tv.getCanal()>1 && tv.getCanal()<120 && tv.getEstado() == true) {
-			tv.setCanal(tv.getCanal()-1);
+			tv.setCanal(tv.getCanal());
 		}		
 	}
 	
@@ -34,13 +34,13 @@ public class Control {
 	
 	public void volumenUp() {
 		if (tv.getVolumen()>1 && tv.getVolumen()<7 && tv.getEstado() == true) {
-			tv.setVolumen(tv.getVolumen()+1);
+			tv.setVolumen(tv.getVolumen());
 		}		
 	}
 	
 	public void volumenDown() {
 		if (tv.getVolumen()>1 && tv.getVolumen()<7 && tv.getEstado() == true) {
-			tv.setVolumen(tv.getVolumen()-1);
+			tv.setVolumen(tv.getVolumen());
 		}
 	}
 	
