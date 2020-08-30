@@ -4,7 +4,7 @@ public class TV {
 	
 	private Marca marca;
 	private int canal = 1, volumen = 1, precio = 500;
-    public boolean estado = false;
+    public boolean estado;
 	private Control control;
 	private static int numTV=0;
 	
@@ -51,8 +51,7 @@ public class TV {
 	}
 	
 	public void setCanal(int canal) {
-		if (canal>=1 && canal<=120) {
-			turnOn();
+		if (estado == true && canal>=1 && canal<=120) {			
 			this.canal = canal;
 		}		
 	}
