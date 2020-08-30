@@ -58,10 +58,6 @@ public class TV {
 		return numTV;
 	}
 	
-	public static void setNumTV(int numTV) {
-		numTV = numTV;
-	}
-	
 	public void turnOn() {
 		this.estado = true;
 	}
@@ -75,25 +71,25 @@ public class TV {
 	}
 	
 	public void canalUp() {
-		if (canal>1 && canal<120 && estado == true) {
+		if (canal>=1 && canal<=120 && estado == true) {
 			setCanal(getCanal()+1);
 		}		
 	}
 	
 	public void canalDown() {
-		if (getCanal()>1 && getCanal()<120 && getEstado() == true) {
+		if (canal>=1 && canal<=120 && estado == true) {
 			setCanal(getCanal()-1);
 		}		
 	}	
 
 	public void volumenUp() {
-		if (getVolumen()>1 && getVolumen()<7 && getEstado() == true) {
+		if (volumen>=1 && volumen<=7 && estado == true) {
 			setVolumen(getVolumen()+1);
 		}		
 	}
 	
 	public void volumenDown() {
-		if (getVolumen()>1 && getVolumen()<7 && getEstado() == true) {
+		if (volumen>=1 && volumen<=7 && estado == true) {
 			setVolumen(getVolumen()-1);
 		}
 	}
