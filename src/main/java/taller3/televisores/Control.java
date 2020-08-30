@@ -5,15 +5,11 @@ public class Control {
 	private TV tv;
 	
 	public void turnOn() {
-		if (tv.getEstado() == false) {
-			tv.estado = true;
-		}
+		tv.turnOn();
 	}
 		
 	public void turnOff() {
-		if (tv.getEstado() == true) {
-			tv.estado = false;
-		}
+		tv.turnOff();
 	}
 	
 	public void canalUp() {
@@ -25,15 +21,11 @@ public class Control {
 	}	
 	
 	public void volumenUp() {
-		if (tv.getEstado() == true && tv.getEstado() == true && tv.getVolumen()>=0 && tv.getVolumen()<7) {
-			tv.setVolumen(tv.getVolumen()+1);
-		}		
+		tv.volumenUp();		
 	}
 	
 	public void volumenDown() {
-		if (tv.getEstado() == true && tv.getVolumen()>0 && tv.getVolumen()<=7) {
-			tv.setVolumen(tv.getVolumen()-1);
-		}
+		tv.volumenDown();
 	}
 	
 	public void setCanal(int canal) {
