@@ -50,9 +50,11 @@ public class TV {
 		return canal;
 	}
 	
-	public void setCanal(int canal) {		
-		this.canal = canal;
-		}
+	public void setCanal(int canal) {
+		if (canal>=1 && canal<=120) {
+			this.canal = canal;
+		}		
+	}
 		
 	public static int getNumTV() {
 		return numTV;
