@@ -17,15 +17,11 @@ public class Control {
 	}
 	
 	public void canalUp() {
-		if (tv.getCanal()>=1 && tv.getCanal()<120) {
-			tv.setCanal(tv.getCanal()+1);
-		}		
+		tv.canalUp();		
 	}
 	
 	public void canalDown() {
-		if (tv.getEstado() == true && tv.getCanal()>1 && tv.getCanal()<=120) {
-			tv.setCanal(tv.getCanal()-1);
-		}		
+		tv.canalDown();		
 	}	
 	
 	public void volumenUp() {

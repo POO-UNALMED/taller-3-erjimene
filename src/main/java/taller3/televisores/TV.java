@@ -26,8 +26,7 @@ public class TV {
 		return control;
 	}
 	
-	public void setControl(Control control) {
-		turnOn();
+	public void setControl(Control control) {		
 		this.control = control;
 	}
 	
@@ -82,13 +81,13 @@ public class TV {
 	}
 	
 	public void canalUp() {
-		if (estado == true && canal>=1 && canal<=120) {
+		if (estado == true && canal>=1 && canal<120) {
 			canal++;
 		}		
 	}
 	
 	public void canalDown() {
-		if (estado == true && canal>=1 && canal<=120) {
+		if (estado == true && canal>1 && canal<=120) {
 			canal--;
 		}		
 	}	
