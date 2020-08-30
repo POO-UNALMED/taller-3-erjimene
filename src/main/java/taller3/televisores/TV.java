@@ -4,7 +4,7 @@ public class TV {
 	
 	private Marca marca;
 	private int canal = 1, volumen = 1, precio = 500;
-    boolean estado; // encendido true, apagado false.
+    public boolean estado;
 	private Control control;
 	private static int numTV;
 	
@@ -54,20 +54,22 @@ public class TV {
 		this.canal = canal;
 	}
 	
-	public static int getNumTV() {
-		return numTV;
-	}
-	
-	public static void setNumTV(int numTV) {
-		numTV = numTV;
+	public int getNumTV() {
+		return TV.numTV;
 	}
 	
 	public void turnOn() {
-		this.estado = true;
+		if (estado == false) {
+			this.estado = true;
+		}
+		
 	}
 	
 	public void turnOff() {
-		this.estado = false;
+		if (estado == true) {
+			this.estado = false;
+		}
+		
 	}
 	
 	public boolean getEstado() {
@@ -75,26 +77,26 @@ public class TV {
 	}
 	
 	public void canalUp() {
-		if (canal>=1 && canal<=120 && estado == true) {
-			setCanal(getCanal()+1);
+		if (canal>=1 && canal<120 && estado == true) {
+			canal++;
 		}		
 	}
 	
 	public void canalDown() {
-		if (canal>=1 && canal<=120 && estado == true) {
-			setCanal(getCanal()-1);
+		if (canal>1 && canal<=120 && estado == true) {
+			canal--;
 		}		
 	}	
 
 	public void volumenUp() {
-		if (volumen>=1 && volumen<=7 && estado == true) {
-			setVolumen(getVolumen()+1);
+		if (volumen>=0 && volumen<7 && estado == true) {
+			volumen++;
 		}		
 	}
 	
 	public void volumenDown() {
-		if (volumen>=1 && volumen<=7 && estado == true) {
-			setVolumen(getVolumen()-1);
+		if (volumen>0 && volumen<=7 && estado == true) {
+			volumen--;
 		}
 	}
 	
