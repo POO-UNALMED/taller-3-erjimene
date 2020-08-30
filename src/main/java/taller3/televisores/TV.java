@@ -27,6 +27,7 @@ public class TV {
 	}
 	
 	public void setControl(Control control) {
+		turnOn();
 		this.control = control;
 	}
 	
@@ -50,8 +51,7 @@ public class TV {
 		return canal;
 	}
 	
-	public void setCanal(int canal) {
-		turnOn();
+	public void setCanal(int canal) {		
 		this.canal = canal;
 		}
 		
