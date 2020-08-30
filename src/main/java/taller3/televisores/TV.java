@@ -51,13 +51,10 @@ public class TV {
 	}
 	
 	public void setCanal(int canal) {
-		if (estado == false) {
-			estado = true;
-			this.canal = canal;
+		turnOn();
+		this.canal = canal;
 		}
 		
-	}
-	
 	public static int getNumTV() {
 		return numTV;
 	}
